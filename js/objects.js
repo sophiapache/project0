@@ -1,5 +1,0 @@
-const moves = {
-    playerOneArr: [],
-    playerTwoArr: [],
-     
-}

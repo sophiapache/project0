@@ -31,10 +31,6 @@ body {
     align-items: center;
 }
 
-#t1 {
-    min-width: 100px;
-    min-height: 100px;
-}
 img {
     display: block;
     width: 100%;
