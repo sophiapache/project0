@@ -1,0 +1,51 @@
+body {
+    background-color: white;
+    color: black;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 400px;
+}
+
+.header {
+    transition: 0.3s all;
+    text-align: center;
+    font-size: 200%;
+    padding: 2px;
+    border-radius: 0.5em;
+}
+
+.tile {
+    border: solid black;
+    border-width: 2px;
+    min-width: 100px;
+    min-height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#t1 {
+    min-width: 100px;
+    min-height: 100px;
+}
+img {
+    display: block;
+    width: 100%;
+}
+
+.display {
+    text-align: center;
+    padding: 1em;
+}
+
+.buttons {
+    text-align: center;
+    padding: 1em;
+}

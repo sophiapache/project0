@@ -1,0 +1,5 @@
+const moves = {
+    playerOneArr: [],
+    playerTwoArr: [],
+     
+}
