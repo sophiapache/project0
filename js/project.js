@@ -2,6 +2,7 @@ const checkForWin = function (arr) { // to determine if the player won
     let combos = [[1, 2, 3], [3, 6, 9], [1, 4, 7], [7, 8, 9], [1, 5, 9], [3, 5, 7], [2, 5, 8], [4, 5, 6]]; // winning arrays
     if (checkEquality(arr, combos) === true) {
         $('.win').css('visibility','visible'); // displays You Won! when win
+        $('.win').addClass('animate');
         $('.tile').off('click'); // turns off the event listener
     }
 }
@@ -32,6 +33,7 @@ $(document).ready(function () {
         }
         if (count === 9) {
             $('.draw').css('visibility','visible');
+            $('.draw').addClass('animate');
         }
         function $playerOne(tile) {
             const character1Choice = $('input[name=character1]:checked', '#p1Form').val();
