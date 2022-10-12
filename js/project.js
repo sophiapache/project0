@@ -34,8 +34,18 @@ $(document).ready(function () {
             $('.draw').css('visibility','visible');
         }
         function $playerOne(tile) {
-            if ($(tile).text() == '') {
-                $(tile).text('X'); // player two will be default O
+            const character1Choice = $('input[name=character1]:checked', '#p1Form').val();
+            if ($(tile).text() == ''
+            && character1Choice === "bats1") {
+                $(tile).html('<img src="https://cdn.pixabay.com/photo/2016/04/01/11/13/animal-1300257_960_720.png">'); 
+                playerOneArr.push(Number($(tile).attr('id')));
+                $('#player1').css('font-weight','normal');
+                $('#player1').css('color','darkgray');
+                $('#player2').css('color','orange');
+                $('#player2').css('font-weight','bold');
+            } else if ($(tile).text() == '' 
+            && character1Choice === "cats1") {
+                $(tile).html('<img src="https://cdn.pixabay.com/photo/2013/07/12/16/38/halloween-151310_960_720.png" style="width:100px;height:auto;">'); 
                 playerOneArr.push(Number($(tile).attr('id')));
                 $('#player1').css('font-weight','normal');
                 $('#player1').css('color','darkgray');
@@ -47,8 +57,18 @@ $(document).ready(function () {
             console.log(playerOneArr);
         }
         function $playerTwo (tile) {
-            if ($(tile).text() == '') {
-                $(tile).text('O'); // player two will be default O
+            const character2Choice = $('input[name=character2]:checked', '#p2Form').val();
+            if ($(tile).text() == '' 
+            && character2Choice === "bats2") {
+                $(tile).html('<img src="https://cdn.pixabay.com/photo/2016/04/01/11/13/animal-1300257_960_720.png">'); 
+                playerTwoArr.push(Number($(tile).attr('id')));
+                $('#player2').css('font-weight','normal');
+                $('#player2').css('color','darkgray');
+                $('#player1').css('color','orange');
+                $('#player1').css('font-weight','bold');
+            } else if ($(tile).text() == '' 
+            && character2Choice === "cats2"){
+                $(tile).html('<img src="https://cdn.pixabay.com/photo/2013/07/12/16/38/halloween-151310_960_720.png" style="width:100px;height:auto;">'); 
                 playerTwoArr.push(Number($(tile).attr('id')));
                 $('#player2').css('font-weight','normal');
                 $('#player2').css('color','darkgray');
@@ -88,9 +108,11 @@ $(document).ready(function () {
         $('#player2').html('');
     });
     $('#ply').click(function () {
-        if ($('#player1').html() !== '' && $('#player2').html() !== '') {
-            $('.invalidname').css('visibility','hidden');
-            $('.popup').css('visibility','hidden');
+        if ($('#player1').html() !== '' 
+        && $('#player2').html() !== '' 
+        && $("input:radio[name='character1']").is(':checked') 
+        && $("input:radio[name='character2']").is(':checked')) {
+            $('.popup').fadeOut(1300);
         } else {
             $('.invalidname').css('visibility','visible');
         }
@@ -106,3 +128,5 @@ $(document).ready(function() {
     $(target).burn('diffusion', 2);
 });
 
+// only select one character
+// make everything work on mobile

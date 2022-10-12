@@ -8,6 +8,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="/Users/sophiapache/Projects/project0/js/burning"></script>
     <script src="js/project.js"></script>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
         </style> 
@@ -50,18 +52,30 @@
 </div>
 <div class="popup">
     <section class="window" id="p1">
-        Player One: <input type="p1name" placeholder="name" id="p1n">
+        Player One: <input type="p1name" placeholder="name" id="p1n"><br><br>
+        <form id="p1Form">
+        <label for="bat" class="spookybat">Bat</label>
+        <input type="radio" id="bat" name="character1" value="bats1"><br>
+        <label for="cat" class="spookycat">Cat</label>
+        <input type="radio" id="cat" name="character1" value="cats1"><br><br>
+        </form>
         <button class="allbuttons" id="submit1">Submit </button>  <button class="allbuttons" id="resetname">Reset</button>
     </section>
     <section class="window" id="p2">
         <br><br>Player Two: <input type="p2name" placeholder="name" id="p2n">
+        <br><br>
+        <form id="p2Form">
+        <label for="bat" class="spookybat">Bat</label>
+        <input type="radio" id="bat" name="character2" value="bats2"><br>
+        <label for="cat" class="spookycat">Cat</label>
+        <input type="radio" id="cat" name="character2" value="cats2"><br><br></form>
         <button class="allbuttons" id="submit2">Submit </button>  <button class="allbuttons" id="resetname2">Reset</button>
     </section>
     <section class="invalidname">
-        <br> You need to add names!
+        <br> You need to add names / select characters!
     </section>
     <section class="window" id="play">
-        <br><br><br><button class="allbuttons" id="ply">Play!</button>
+        <br><br><button class="allbuttons" id="ply">Play!</button>
     </section>
 </div>
 </body>
