@@ -6,15 +6,18 @@
     <link rel="stylesheet" href="css/project.css">
     <script src="js/jquery.js"></script>
     <script src="js/project.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        </style> 
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
+<div class="image">
+    <img src="/Users/sophiapache/Projects/project0/pics/Sinister.Pumpkinman.webp">
+</div>
+<div class="main">
 <section class="header">
     <h1>Tic-Tac-Toe</h1>
-</section>
-<section class="display">
-    Player <span class ="display-player" id="player1">One</span>'s turn
-    Player <span class ="display-player" id="player2">Two</span>'s turn
 </section>
 <section class="container">
     <div class="tile" id="1"></div>
@@ -27,14 +30,21 @@
     <div class="tile" id="8"></div>
     <div class="tile" id="9"></div>
 </section>
-<section class="win">
-    <h2>You won!</h2>
-</section>
-<section class ="buttons">
-    <button id="reset">Reset</button>
-</section>
-<section class="stop">
-
-</section>
+</div>
+<div class="sidebar">
+    <section class="display"><br>
+        Player <span class ="display-player" id="player1">One</span>'s turn<br>
+        Player <span class ="display-player" id="player2">Two</span>'s turn
+    </section>
+    <section class="win">
+        <h2>You won!</h2>
+    </section>
+    <section class="draw">
+        <h2>It's a draw.</h2>
+    </section>
+    <section class ="buttons">
+        <button id="reset">Reset</button>
+    </section>
+</div>
 </body>
 </html>

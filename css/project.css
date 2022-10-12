@@ -1,6 +1,64 @@
+html {
+    margin:0;
+    padding: 0;
+}
+
 body {
-    background-color: white;
+    background-image: url('/Users/sophiapache/Projects/project0/pics/halloween-5596921_1920.jpg');
     color: black;
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.image {
+    width: 470px;
+    height: 400px;
+    padding-top: 5px;
+    margin-top: 215px;
+    margin-bottom: 100px;
+    margin-left: 700px;
+    position: absolute;
+    z-index: 100;
+}
+
+.main {
+    width: 600px;
+    height: 475px;
+    color: white;
+    background: rgb(70,69,66);
+    background: linear-gradient(360deg, rgba(70,69,66,1) 0%, rgba(0,0,0,0.74831931063441) 100%); 
+    margin-left: 350px;
+    box-shadow: 0px 15px 15px #2a2a29;
+    text-align: center;
+    padding-top: 5px;
+    margin-top: 25px;
+    margin-bottom: 100px;  
+    position: absolute;
+    border-radius: 5%;
+    z-index: 20;
+    font-family: 'Press Start 2P', cursive;
+    opacity: 0.8;
+}
+
+.sidebar {
+    width: 150px;
+    height: 200px;
+    color: white;
+    background: rgb(70,69,66);
+    background: linear-gradient(360deg, rgba(70,69,66,1) 0%, rgba(0,0,0,0.74831931063441) 100%); 
+    margin-left: 180px;
+    box-shadow: 0px 15px 15px #2a2a29;
+    text-align: center;
+    padding-top: 5px;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    border-radius: 5%;
+    position: absolute;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 70%;
+    z-index: 50;
+    opacity: 0.9;
 }
 
 .container {
@@ -9,26 +67,28 @@ body {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
-    max-width: 400px;
+    max-width: 450px;
+    padding: 0.5em;
 }
 
 .header {
     transition: 0.3s all;
     text-align: center;
-    font-size: 200%;
-    padding: 2px;
-    border-radius: 0.5em;
+    font-size: 150%;
+    padding: 0px;
+    border-radius: 1em;
 }
 
 .tile {
     border: solid black;
-    border-width: 2px;
+    border-width: 3px;
     min-width: 100px;
     min-height: 100px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 200%;
 }
 
 img {
@@ -38,12 +98,12 @@ img {
 
 .display {
     text-align: center;
-    padding: 1em;
+    padding: 0em;
 }
 
 .buttons {
     text-align: center;
-    padding: 1em;
+    padding: 0em;
 }
 
 .win {
@@ -54,4 +114,10 @@ img {
 
 #player1, #player2 {
     color: darkgray;
+}
+
+.draw {
+    color: purple;
+    visibility: hidden;
+    text-align: center;
 }
