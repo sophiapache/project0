@@ -1,10 +1,11 @@
 html {
     margin:0;
     padding: 0;
+    width: 50vw;
 }
 
 body {
-    background-image: url('/Users/sophiapache/Projects/project0/pics/halloween-5596921_1920.jpg');
+    background-image: url('https://i.ibb.co/kQ9SKDQ/halloween-5596921-1920.jpg');
     color: black;
     margin: 0;
     padding: 0;
@@ -12,14 +13,15 @@ body {
 }
 
 .image {
-    width: 470px;
-    height: 400px;
+    width: 51vw;
+    height: 163vh;
     padding-top: 5px;
     margin-top: 215px;
     margin-bottom: 100px;
     margin-left: 700px;
     position: absolute;
     z-index: 100;
+    pointer-events: none;
 }
 
 .main {
@@ -38,7 +40,7 @@ body {
     border-radius: 5%;
     z-index: 20;
     font-family: 'Press Start 2P', cursive;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .sidebar {
@@ -68,13 +70,13 @@ body {
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
     max-width: 450px;
-    padding: 0.5em;
+    padding: 0em;
 }
 
 .header {
     transition: 0.3s all;
     text-align: center;
-    font-size: 150%;
+    font-size: 170%;
     padding: 0px;
     border-radius: 1em;
 }
@@ -89,6 +91,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 200%;
+    background: url('https://img.freepik.com/free-vector/hand-drawn-halloween-border-template_23-2149075823.jpg?w=2000');
 }
 
 img {
@@ -101,9 +104,11 @@ img {
     padding: 0em;
 }
 
-.buttons {
+.button {
     text-align: center;
     padding: 0em;
+    color: white;
+    background-color: black;
 }
 
 .win {
@@ -113,11 +118,93 @@ img {
 }
 
 #player1, #player2 {
-    color: darkgray;
+    color: orange;
 }
 
 .draw {
-    color: purple;
+    color: red;
     visibility: hidden;
     text-align: center;
+}
+
+
+.burning{
+    color: white; 
+    letter-spacing: 0.1em;  
+    font-weight: bold;
+}
+
+.popup {
+    width: 450px;
+    height: 310px;
+    color: white;
+    background: rgb(70,69,66);
+    background: linear-gradient(360deg, rgba(70,69,66,1) 0%, rgba(0,0,0,0.74831931063441) 100%);
+    margin-left: 420px;
+    box-shadow: 0px 15px 15px #2a2a29;
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 135px;
+    margin-bottom: 100px;
+    position: absolute;
+    border-radius: 5%;
+    font-size: 100%;
+    z-index: 120;
+    visibility: visible;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.invalidname {
+    color: orange;
+    visibility: hidden;
+}
+
+.allbuttons {
+    align-items: center;
+    background-color: initial;
+    background-image: linear-gradient(#464d55, #25292e);
+    border-radius: 8px;
+    border-width: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 14px;
+    height: 30px;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 32px;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all 150ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.allbuttons:hover {
+    -shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+    opacity: .85;
+}
+
+.allbuttons:active {
+    outline: 0;
+}
+
+.allbuttons:focus {
+    -shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+@media (max-width: 420px) {
+.allbuttons {
+    height: 48px;
+}
 }

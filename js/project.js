@@ -38,6 +38,8 @@ $(document).ready(function () {
                 $(tile).text('X'); // player two will be default O
                 playerOneArr.push(Number($(tile).attr('id')));
                 $('#player1').css('font-weight','normal');
+                $('#player1').css('color','darkgray');
+                $('#player2').css('color','orange');
                 $('#player2').css('font-weight','bold');
             } else {
                 count = count - 1;
@@ -49,6 +51,8 @@ $(document).ready(function () {
                 $(tile).text('O'); // player two will be default O
                 playerTwoArr.push(Number($(tile).attr('id')));
                 $('#player2').css('font-weight','normal');
+                $('#player2').css('color','darkgray');
+                $('#player1').css('color','orange');
                 $('#player1').css('font-weight','bold');
             } else {
                 count = count - 1;
@@ -60,11 +64,45 @@ $(document).ready(function () {
     $('#reset').click(function() { // this button resets the game
         $('.tile').on('click', gamePlay);
         $('.tile').text('');
-        $('#player2').css('font-weight','bold');
-        $('#player1').css('font-weight','normal');
+        $('#player1').css('font-weight','bold');
+        $('#player1').css('color','orange');
+        $('#player2').css('font-weight','normal');
+        $('#player2').css('color','darkgray');
         $('.win').css('visibility','hidden');
         count = 0;
         playerOneArr = []; 
         playerTwoArr = []; 
-    })
+    });
+    $('#submit1').click(function () {
+        const p1Name = $('#p1n').val();
+        $('#player1').html(p1Name);
+    });  
+    $('#submit2').click(function () {
+        const p2Name = $('#p2n').val();
+        $('#player2').html(p2Name);
+    });
+    $('#resetname').click(function () {
+        $('#player1').html('');
+    });
+    $('#resetname2').click(function () {
+        $('#player2').html('');
+    });
+    $('#ply').click(function () {
+        if ($('#player1').html() !== '' && $('#player2').html() !== '') {
+            $('.invalidname').css('visibility','hidden');
+            $('.popup').css('visibility','hidden');
+        } else {
+            $('.invalidname').css('visibility','visible');
+        }
+    });
+    $('.burning').burn();
+    $(target).burn('diffusion', 2);
 });
+
+
+
+$(document).ready(function() {
+    $('.burning').burn();
+    $(target).burn('diffusion', 2);
+});
+
