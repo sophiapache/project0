@@ -18,5 +18,9 @@ This project makes use of front-end development languages including:
 ### Play
 [Play the game here.](https://sophiapache.github.io/project0)
 
+## Media Query
+This game should work best on most standard size mobiles, particularly for iPhones. 
+This was achieved by creating a separate @media screen selector in the CSS file.
+
 ## Acknowledgments
-Thank you Loden and Joel!
+Thank you Loden and Joel, margaritas on me.

@@ -32,6 +32,7 @@ $(document).ready(function () {
     let count = 0;
     let playerOneArr = []; 
     let playerTwoArr = []; 
+    combos = [[1, 2, 3], [3, 6, 9], [1, 4, 7], [7, 8, 9], [1, 5, 9], [3, 5, 7], [2, 5, 8], [4, 5, 6]];
     $('#player1').css('font-weight','bold');
     const gamePlay = function () {
         count++; // to make alternate turns
@@ -42,13 +43,13 @@ $(document).ready(function () {
             $playerTwo(this);
             checkForWin(playerTwoArr);
         }
-        if (count === 9 && checkEquality(arr, combos) === false) {
+        if (count === 9 && checkEquality(playerOneArr, combos) === false && checkEquality(playerTwoArr, combos) === false) {
             $('.draw').css('visibility','visible');
             $('.draw').addClass('animate');
         }
         function $playerOne(tile) {
             const character1Choice = $('input[name=character1]:checked', '#p1Form').val();
-            if ($(tile).text() == ''
+            if ($(tile).html() == ''
             && character1Choice === "bats1") {
                 $(tile).html('<img src="https://cdn.pixabay.com/photo/2016/04/01/11/13/animal-1300257_960_720.png">'); 
                 playerOneArr.push(Number($(tile).attr('id')));
@@ -56,7 +57,7 @@ $(document).ready(function () {
                 $('#player1').css('color','darkgray');
                 $('#player2').css('color','orange');
                 $('#player2').css('font-weight','bold');
-            } else if ($(tile).text() == '' 
+            } else if ($(tile).html() == '' 
             && character1Choice === "cats1") {
                 $(tile).html('<img src="https://cdn.pixabay.com/photo/2013/07/12/16/38/halloween-151310_960_720.png" style="width:100px;height:auto;">'); 
                 playerOneArr.push(Number($(tile).attr('id')));
@@ -71,7 +72,7 @@ $(document).ready(function () {
         }
         function $playerTwo (tile) {
             const character2Choice = $('input[name=character2]:checked', '#p2Form').val();
-            if ($(tile).text() == '' 
+            if ($(tile).html() == '' 
             && character2Choice === "bats2") {
                 $(tile).html('<img src="https://cdn.pixabay.com/photo/2016/04/01/11/13/animal-1300257_960_720.png">'); 
                 playerTwoArr.push(Number($(tile).attr('id')));
@@ -79,7 +80,7 @@ $(document).ready(function () {
                 $('#player2').css('color','darkgray');
                 $('#player1').css('color','orange');
                 $('#player1').css('font-weight','bold');
-            } else if ($(tile).text() == '' 
+            } else if ($(tile).html() == '' 
             && character2Choice === "cats2"){
                 $(tile).html('<img src="https://cdn.pixabay.com/photo/2013/07/12/16/38/halloween-151310_960_720.png" style="width:100px;height:auto;">'); 
                 playerTwoArr.push(Number($(tile).attr('id')));
@@ -102,6 +103,7 @@ $(document).ready(function () {
         $('#player2').css('font-weight','normal');
         $('#player2').css('color','darkgray');
         $('.win').css('visibility','hidden');
+        $('.draw').css('visibility','hidden');
         count = 0;
         playerOneArr = []; 
         playerTwoArr = []; 
@@ -139,14 +141,14 @@ $(document).ready(function () {
     $('#bat2').click(characterIsChecked);
     $('#cat2').click(characterIsChecked);
     $('.burning').burn();
-    $(target).burn('diffusion', 2);
+    $('.header').burn('diffusion', 2);
 });
 
 
 
 $(document).ready(function() {
     $('.burning').burn();
-    $(target).burn('diffusion', 2);
+    $('.header').burn('diffusion', 2);
 });
 
 // only select one character
