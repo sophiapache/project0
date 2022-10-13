@@ -1,20 +1,15 @@
-# Intro to Markdown
+# Tic-Tac-Toe
 
-## Subheading
+## By Sophia Pache
 
-### Subsubheading
+### Overview
+This is a classic game of childhood favorite game, tic-tac-toe, with a spooky twist. Select your characters, fill in your names, and try to fill three tiles in a row without your opponent blocking you. The sidebar will let you know if you win, lose, or if there is a draw.
 
-Heading
-=======
-Subheading
---------
-
-Paragraphs are automatically respected.
-
-This is a second paragraph.
-
-## Blockquotes
-> I invented the Web. -- Tim Berners-Lee
+### Technologies
+This project makes use of front-end development languages including:
+1. HTML
+2. CSS
+3. Javascript (+JQuery)
 
 ## Lists
 * Groucho

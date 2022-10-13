@@ -16,6 +16,17 @@ const checkEquality = function (array, combo){ // to check if array contents are
     } return false;
 }
 
+const characterIsChecked = function () { 
+    if ($('input[name=character1]:checked', '#p1Form').attr('id') === 'bat1') {
+        $('#bat2').attr('disabled',true);
+    } else if ($('input[name=character1]:checked', '#p1Form').attr('id') === 'cat1') {
+        $('#cat2').attr('disabled',true);
+    } else if ($('input[name=character2]:checked', '#p2Form').attr('id') === 'bat2') {
+        $('#bat1').attr('disabled',true);
+    } else if ($('input[name=character2]:checked', '#p2Form').attr('id') === 'cat2') {
+        $('#cat1').attr('disabled',true);
+    }
+}
 
 $(document).ready(function () {
     let count = 0;
@@ -105,9 +116,13 @@ $(document).ready(function () {
     });
     $('#resetname').click(function () {
         $('#player1').html('');
+        $("input:radio[name='character1']").prop('checked',false);
+        $("input:radio[name='character2']").attr('disabled',false);
     });
     $('#resetname2').click(function () {
         $('#player2').html('');
+        $("input:radio[name='character2']").prop('checked',false);
+        $("input:radio[name='character1']").attr('disabled',false);
     });
     $('#ply').click(function () {
         if ($('#player1').html() !== '' 
@@ -119,6 +134,10 @@ $(document).ready(function () {
             $('.invalidname').css('visibility','visible');
         }
     });
+    $('#bat1').click(characterIsChecked);
+    $('#cat1').click(characterIsChecked);
+    $('#bat2').click(characterIsChecked);
+    $('#cat2').click(characterIsChecked);
     $('.burning').burn();
     $(target).burn('diffusion', 2);
 });
