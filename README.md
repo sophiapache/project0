@@ -9,33 +9,14 @@ This is a classic game of childhood favorite game, tic-tac-toe, with a spooky tw
 This project makes use of front-end development languages including:
 1. HTML
 2. CSS
-3. Javascript (+JQuery)
+3. Javascript
 
-## Lists
-* Groucho
-* Harpo
-* Chico
+### Libraries Used
+* JQuery
+* Animate CSS
 
-### Numbered Lists
-1. Groucho
-2. Harpo
-3. Chico
+### Play
+[Play the game here.](https://sophiapache.github.io/project0)
 
-## Code Formatting
-jQuery makes frequent use of the `$` variable. The DOM favors the `document` object.
-
-```javascript
-const hey = function () {
-    console.log('hi');
-}
-```
-
-## Links
-Here is a [link to the W3C](http://w3c.org)
-
-## Formatting
-We can add *italic emphasis*, **bold emphasis**, ***combined***
-Other _flavors_ 
-
-## Images
-![Bill Murray](https://www.fillmurray.com/50/50)
+## Acknowledgments
+Thank you Loden and Joel!
