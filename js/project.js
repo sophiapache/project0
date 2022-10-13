@@ -42,7 +42,7 @@ $(document).ready(function () {
             $playerTwo(this);
             checkForWin(playerTwoArr);
         }
-        if (count === 9) {
+        if (count === 9 && checkEquality(arr, combos) === false) {
             $('.draw').css('visibility','visible');
             $('.draw').addClass('animate');
         }
