@@ -146,10 +146,3 @@ $(document).ready(function () {
 
 
 
-$(document).ready(function() {
-    $('.burning').burn();
-    $('.header').burn('diffusion', 2);
-});
-
-// only select one character
-// make everything work on mobile
