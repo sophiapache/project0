@@ -260,7 +260,7 @@ img {
         box-shadow: 0px 15px 15px #2a2a29;
         text-align: center;
         padding-top: 5px;
-        top: 25%;
+        top: 27%;
         border-radius: 5%;
         position: absolute;
         font-family: 'Press Start 2P', cursive;
@@ -325,6 +325,6 @@ img {
         visibility: visible;
         font-family: 'Press Start 2P', cursive;
         min-width: 320px;
-        top: -4%;
+        top: -3%;
     }
 }
