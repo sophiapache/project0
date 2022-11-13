@@ -246,7 +246,7 @@ img {
         z-index: 20;
         font-family: 'Press Start 2P', cursive;
         opacity: 0.9;
-        bottom: 45%;
+        top: 5%;
     }
     .sidebar {
         max-width: 600px;
@@ -260,7 +260,7 @@ img {
         box-shadow: 0px 15px 15px #2a2a29;
         text-align: center;
         padding-top: 5px;
-        bottom: 34%;
+        top: 25%;
         border-radius: 5%;
         position: absolute;
         font-family: 'Press Start 2P', cursive;
@@ -325,6 +325,6 @@ img {
         visibility: visible;
         font-family: 'Press Start 2P', cursive;
         min-width: 320px;
-        bottom: 45%;
+        top: -4%;
     }
 }
