@@ -154,10 +154,10 @@ img {
 
 .popup {
     max-width: 600px;
-    max-height: 310px;
+    max-height: 350px;
     min-width: 100px;
     width: 40vw;
-    height: 176vh;
+    height: 205vh;
     margin-left: auto;
     margin-top: auto;
     color: white;
@@ -168,7 +168,7 @@ img {
     text-align: center;
     padding-top: 30px;
     margin-top: 135px;
-    bottom: 30%;
+    bottom: 26%;
     position: absolute;
     border-radius: 5%;
     font-size: 65%;
@@ -234,6 +234,7 @@ img {
         min-width: 320px;
         width: 100vw;
         height: 225vh;
+        left: 0%;
         color: white;
         background: rgb(70,69,66);
         background: linear-gradient(360deg, rgba(70,69,66,1) 0%, rgba(0,0,0,0.74831931063441) 100%);
@@ -245,6 +246,7 @@ img {
         z-index: 20;
         font-family: 'Press Start 2P', cursive;
         opacity: 0.9;
+        bottom: 45%;
     }
     .sidebar {
         max-width: 600px;
@@ -258,14 +260,14 @@ img {
         box-shadow: 0px 15px 15px #2a2a29;
         text-align: center;
         padding-top: 5px;
-        margin-top: 350px;
+        bottom: 34%;
         border-radius: 5%;
         position: absolute;
         font-family: 'Press Start 2P', cursive;
         font-size: 65%;
         z-index: 50;
         opacity: 0.9;
-        margin-left: 0px;
+        left: 0%;
     }
     .tile {
         border: solid black;
@@ -307,7 +309,8 @@ img {
     .popup {
         width: 100vw;
         max-width: 620px;
-        height: 400px;
+        max-height: 44vh;
+        height: 44vh;
         left: 0%;
         color: white;
         background: rgb(70,69,66);
@@ -322,6 +325,6 @@ img {
         visibility: visible;
         font-family: 'Press Start 2P', cursive;
         min-width: 320px;
-        bottom: 52%;
+        bottom: 45%;
     }
 }
