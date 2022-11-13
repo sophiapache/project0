@@ -4,6 +4,7 @@ const checkForWin = function (arr) { // to determine if the player won
         $('.win').css('visibility','visible'); // displays You Won! when win
         $('.win').addClass('animate');
         $('.tile').off('click'); // turns off the event listener
+        return true;
     }
 }
 
@@ -30,15 +31,30 @@ $(document).ready(function () {
     let playerOneArr = []; 
     let playerTwoArr = []; 
     combos = [[1, 2, 3], [3, 6, 9], [1, 4, 7], [7, 8, 9], [1, 5, 9], [3, 5, 7], [2, 5, 8], [4, 5, 6]];
+    $('#player2').css('font-weight','normal');
+    $('#player2').css('color','darkgray');
+    $('#player1').css('color','orange');
     $('#player1').css('font-weight','bold');
     const gamePlay = function () {
         count++; // to make alternate turns
         if (count % 2) {
             $playerOne(this); // each player's turn but also check if the player has won
             checkForWin(playerOneArr);
+            if (checkForWin(playerOneArr)) {
+                $('#player1').css('color','orange');
+                $('#player1').css('font-weight','bold');
+                $('#player2').css('font-weight','normal'); // changes CSS for the text color changing depending on player's turn
+                $('#player2').css('color','darkgray');
+            }
         } else {
             $playerTwo(this);
             checkForWin(playerTwoArr);
+            if (checkForWin(playerTwoArr)) {
+                $('#player2').css('color','orange');
+                $('#player2').css('font-weight','bold');
+                $('#player1').css('font-weight','normal');
+                $('#player1').css('color','darkgray');
+            }
         }
         if (count === 9 && checkEquality(playerOneArr, combos) === false && checkEquality(playerTwoArr, combos) === false) {
             $('.draw').css('visibility','visible'); // check for draw
@@ -46,44 +62,37 @@ $(document).ready(function () {
         }
         function $playerOne(tile) { // player one's turn
             const character1Choice = $('input[name=character1]:checked', '#p1Form').val();
+            $('#player1').css('font-weight','normal');
+            $('#player1').css('color','darkgray');
+            $('#player2').css('color','orange');
+            $('#player2').css('font-weight','bold');
             if ($(tile).html() == ''
             && character1Choice === "bats1") { // this makes it so user can't press occupied tile and if they chose a certain character, their tile image will reflect that
                 $(tile).html('<img src="https://cdn.pixabay.com/photo/2016/04/01/11/13/animal-1300257_960_720.png">'); 
                 playerOneArr.push(Number($(tile).attr('id')));
-                $('#player1').css('font-weight','normal');
-                $('#player1').css('color','darkgray');
-                $('#player2').css('color','orange');
-                $('#player2').css('font-weight','bold');
             } else if ($(tile).html() == '' 
             && character1Choice === "cats1") { // this makes it so user can't press occupied tile and if they chose a certain character, their tile image will reflect that
                 $(tile).html('<img src="https://cdn.pixabay.com/photo/2013/07/12/16/38/halloween-151310_960_720.png" style="width:100px;height:auto;">'); 
                 playerOneArr.push(Number($(tile).attr('id')));
-                $('#player1').css('font-weight','normal');
-                $('#player1').css('color','darkgray');
-                $('#player2').css('color','orange');
-                $('#player2').css('font-weight','bold');
             } else { // if user presses on occupied tile it won't count as a turn
                 count = count - 1;
             }
         }
         function $playerTwo (tile) { // player two's turn
+                $('#player2').css('font-weight','normal'); // changes CSS for the text color changing depending on player's turn
+                $('#player2').css('color','darkgray');
+                $('#player1').css('color','orange');
+                $('#player1').css('font-weight','bold');
             const character2Choice = $('input[name=character2]:checked', '#p2Form').val();
             if ($(tile).html() == '' 
             && character2Choice === "bats2") { // this makes it so user can't press occupied tile and if they chose a certain character, their tile image will reflect that
                 $(tile).html('<img src="https://cdn.pixabay.com/photo/2016/04/01/11/13/animal-1300257_960_720.png">'); 
                 playerTwoArr.push(Number($(tile).attr('id'))); // push player's choice into the array
-                $('#player2').css('font-weight','normal'); // changes CSS for the text color changing depending on player's turn
-                $('#player2').css('color','darkgray');
-                $('#player1').css('color','orange');
-                $('#player1').css('font-weight','bold');
             } else if ($(tile).html() == '' 
             && character2Choice === "cats2"){ // this makes it so user can't press occupied tile and if they chose a certain character, their tile image will reflect that
                 $(tile).html('<img src="https://cdn.pixabay.com/photo/2013/07/12/16/38/halloween-151310_960_720.png" style="width:100px;height:auto;">'); 
                 playerTwoArr.push(Number($(tile).attr('id'))); // push player's choice into the array
-                $('#player2').css('font-weight','normal'); // changes CSS for the text color changing depending on player's turn
-                $('#player2').css('color','darkgray');
-                $('#player1').css('color','orange');
-                $('#player1').css('font-weight','bold');
+
             } else {
                 count = count - 1; // if user presses on occupied tile it won't count as a turn
             }
