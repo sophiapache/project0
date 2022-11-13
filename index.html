@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/project.css">
-    <script src="js/jquery.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="/ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="js/burning.js"></script>
+    <script src="js/jquery.js"></script>
     <script src="js/project.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
@@ -16,67 +15,67 @@
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
-<div class="image">
-    <img src="https://i.ibb.co/C0Bnn2V/Sinister-Pumpkinman.webp">
-</div>
-<div class="main">
-<section class="header">
-    <h1 class="burning">Tic-Tac-Toe</h1>
-</section>
-<section class="container">
-    <div class="tile" id="1"></div>
-    <div class="tile" id="2"></div>
-    <div class="tile" id="3"></div>
-    <div class="tile" id="4"></div>
-    <div class="tile" id="5"></div>
-    <div class="tile" id="6"></div>
-    <div class="tile" id="7"></div>
-    <div class="tile" id="8"></div>
-    <div class="tile" id="9"></div>
-</section>
-</div>
-<div class="sidebar">
-    <section class="display"><br>
-        Player <span class ="display-player" id="player1"></span>'s turn<br><br>
-        Player <span class ="display-player" id="player2"></span>'s turn
+    <div class="image">
+        <img src="https://i.ibb.co/C0Bnn2V/Sinister-Pumpkinman.webp">
+    </div>
+    <div class="main">
+    <section class="header">
+        <h1 class="burning">Tic-Tac-Toe</h1>
     </section>
-    <section class="win">
-        <h2>You won!</h2>
+    <section class="container">
+        <div class="tile" id="1"></div>
+        <div class="tile" id="2"></div>
+        <div class="tile" id="3"></div>
+        <div class="tile" id="4"></div>
+        <div class="tile" id="5"></div>
+        <div class="tile" id="6"></div>
+        <div class="tile" id="7"></div>
+        <div class="tile" id="8"></div>
+        <div class="tile" id="9"></div>
     </section>
-    <section class="draw">
-        <h2>It's a draw.</h2>
-    </section>
-    <section class ="buttons">
-        <button class="allbuttons" id="reset">Reset</button>
-    </section>
-</div>
-<div class="popup">
-    <section class="window" id="p1">
-        Player One: <input type="p1name" placeholder="name" id="p1n"><br><br>
-        <form id="p1Form">
-        <label for="bat" class="spookybat">Bat</label>
-        <input type="radio" id="bat1" name="character1" value="bats1"><br>
-        <label for="cat" class="spookycat">Cat</label>
-        <input type="radio" id="cat1" name="character1" value="cats1"><br><br>
-        </form>
-        <button class="allbuttons" id="submit1">Submit </button>  <button class="allbuttons" id="resetname">Reset</button>
-    </section>
-    <section class="window" id="p2">
-        <br><br>Player Two: <input type="p2name" placeholder="name" id="p2n">
-        <br><br>
-        <form id="p2Form">
-        <label for="bat" class="spookybat">Bat</label>
-        <input type="radio" id="bat2" name="character2" value="bats2"><br>
-        <label for="cat" class="spookycat">Cat</label>
-        <input type="radio" id="cat2" name="character2" value="cats2"><br><br></form>
+    </div>
+    <div class="sidebar">
+        <section class="display">
+            <p>Player <span class ="display-player" id="player1"></span>'s turn</p>
+            <p>Player <span class ="display-player" id="player2"></span>'s turn</p>
+        </section>
+        <section class="win">
+            <h2>You won!</h2>
+        </section>
+        <section class="draw">
+            <h2>It's a draw.</h2>
+        </section>
+        <section class="buttons">
+            <button class="allbuttons" id="reset">Reset</button>
+        </section>
+    </div>
+    <div class="popup">
+        <section class="window" id="p1">
+            <p>Player One: <input type="p1name" placeholder="name" id="p1n"></p>
+            <form id="p1Form">
+            <p><label for="bat" class="spookybat">Bat</label>
+            <input type="radio" id="bat1" name="character1" value="bats1" class="animal-input">
+            <label for="cat" class="spookycat">Cat</label>
+            <input type="radio" id="cat1" name="character1" value="cats1" class="animal-input"></p>
+            </form>
+            <button class="allbuttons" id="submit1">Submit </button>  <button class="allbuttons" id="resetname">Reset</button>
+        </section>
+        <section class="window" id="p2">
+            <p>Player Two: <input type="p2name" placeholder="name" id="p2n"></p>
+        <p><form id="p2Form">
+            <p><label for="bat" class="spookybat">Bat</label>
+            <input type="radio" id="bat2" name="character2" value="bats2" class="animal-input">
+            <label for="cat" class="spookycat">Cat</label>
+            <input type="radio" id="cat2" name="character2" value="cats2" class="animal-input"></p>
+        </form></p>
         <button class="allbuttons" id="submit2">Submit </button>  <button class="allbuttons" id="resetname2">Reset</button>
-    </section>
-    <section class="invalidname">
-        <br> You need to add names / select characters!
-    </section>
-    <section class="window" id="play">
-        <br><br><button class="allbuttons" id="ply">Play!</button>
-    </section>
-</div>
+        </section>
+        <section class="invalidname">
+            <p>You need to add names / select characters!</p>
+        </section>
+        <section class="window" id="play">
+            <p><button class="allbuttons" id="ply">Play!</button></p>
+        </section>
+    </div>
 </body>
 </html>

@@ -9,8 +9,6 @@ html {
     zoom: 1.0 ;
 } 
 
-
-
 body {
     background-image: url('https://i.ibb.co/kQ9SKDQ/halloween-5596921-1920.jpg');
     color: black;
@@ -21,14 +19,10 @@ body {
 }
 
 .image {
-    max-width: 470px;
-    max-height: 400px;
-    width: 29vw;
-    height: 162vh;
-    padding-top: 5px;
-    margin-top: 215px;
-    margin-bottom: 100px;
-    margin-left: 700px;
+    width: 330px;
+    height: 400px;
+    bottom: 6%;
+    left: 56%;
     position: absolute;
     z-index: 100;
     pointer-events: none;
@@ -43,12 +37,11 @@ body {
     color: white;
     background: rgb(70,69,66);
     background: linear-gradient(360deg, rgba(70,69,66,1) 0%, rgba(0,0,0,0.74831931063441) 100%); 
-    margin-left: 350px;
+    left: 28.5%;
     box-shadow: 0px 15px 15px #2a2a29;
     text-align: center;
     padding-top: 5px;
-    margin-top: 25px;
-    margin-bottom: 100px;  
+    bottom: 25%; 
     position: absolute;
     border-radius: 5%;
     z-index: 20;
@@ -65,7 +58,7 @@ body {
     color: white;
     background: rgb(70,69,66);
     background: linear-gradient(360deg, rgba(70,69,66,1) 0%, rgba(0,0,0,0.74831931063441) 100%); 
-    margin-left: 180px;
+    left: 16%;
     box-shadow: 0px 15px 15px #2a2a29;
     text-align: center;
     padding-top: 5px;
@@ -153,31 +146,29 @@ img {
     animation-duration: 5s;
 }
 
-.burning{
+.burning {
     color: white; 
     letter-spacing: 0.1em;  
     font-weight: bold;
 }
 
 .popup {
-    max-width: 450px;
+    max-width: 600px;
     max-height: 310px;
-    width: 34vw;
+    min-width: 100px;
+    width: 40vw;
     height: 176vh;
     margin-left: auto;
     margin-top: auto;
-    min-width: 450px;
     color: white;
     background: rgb(70,69,66);
     background: linear-gradient(360deg, rgba(70,69,66,1) 0%, rgba(0,0,0,0.74831931063441) 100%);
-    /* margin-left: 420px; */
     left: 28.5%;
     box-shadow: 0px 15px 15px #2a2a29;
     text-align: center;
     padding-top: 30px;
     margin-top: 135px;
-    /* margin-bottom: 100px; */
-    bottom: 35%;
+    bottom: 30%;
     position: absolute;
     border-radius: 5%;
     font-size: 65%;
@@ -238,10 +229,10 @@ img {
 
 @media screen and (min-width:320px) and (max-width:640px) {
     .main {
-        max-width: 380px;
+        max-width: 640px;
         max-height: 475px;
-        min-width: 300px;
-        width: 375px;
+        min-width: 320px;
+        width: 100vw;
         height: 225vh;
         color: white;
         background: rgb(70,69,66);
@@ -259,7 +250,8 @@ img {
         max-width: 600px;
         max-height: 200px;
         min-width: 50px;
-        width: 375px;
+        width: 100vw;
+        height: 150px;
         color: white;
         background: rgb(70,69,66);
         background: linear-gradient(360deg, rgba(70,69,66,1) 0%, rgba(0,0,0,0.74831931063441) 100%);
@@ -305,31 +297,31 @@ img {
         padding: 0;
         font-family: 'Press Start 2P', cursive;
         width: 50vw;
+        height: 100vh;
         background-size: 400px 900px;
     }
     .image {
-            margin-left: 700px;
-        }
-
-        .popup {
-            width: 375px;
-            max-width: 620px;
-            height: 400px;
-            left: 0%;
-            color: white;
-            background: rgb(70,69,66);
-            background: linear-gradient(360deg, rgba(70,69,66,1) 0%, rgba(0,0,0,0.74831931063441) 100%);
-            box-shadow: 0px 15px 15px #2a2a29;
-            text-align: center;
-            padding-top: 30px;
-            margin-top: 0px;
-            /* margin-bottom: 100px; */
-            position: absolute;
-            border-radius: 5%;
-            font-size: 65%;
-            z-index: 120;
-            visibility: visible;
-            font-family: 'Press Start 2P', cursive;
-            min-width: 320px;
-            }
+        margin-left: 700px;
     }
+
+    .popup {
+        width: 100vw;
+        max-width: 620px;
+        height: 400px;
+        left: 0%;
+        color: white;
+        background: rgb(70,69,66);
+        background: linear-gradient(360deg, rgba(70,69,66,1) 0%, rgba(0,0,0,0.74831931063441) 100%);
+        box-shadow: 0px 15px 15px #2a2a29;
+        text-align: center;
+        padding-top: 30px;
+        position: absolute;
+        border-radius: 5%;
+        font-size: 65%;
+        z-index: 120;
+        visibility: visible;
+        font-family: 'Press Start 2P', cursive;
+        min-width: 320px;
+        bottom: 52%;
+    }
+}
